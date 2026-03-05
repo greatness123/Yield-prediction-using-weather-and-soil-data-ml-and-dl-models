@@ -1,0 +1,66 @@
+
+================================================================================
+CROP YIELD PREDICTION - 1D CNN MODEL RESULTS
+================================================================================
+
+Dataset Information:
+-------------------
+- Total Samples: 19689
+- Training Samples: 12156
+- Validation Samples: 2597
+- Test Samples: 2604
+- Features: 8
+
+Features Used:
+-------------
+Crop_Year, Area, Annual_Rainfall, Fertilizer, Pesticide, Crop, Season, State
+
+Model Architecture:
+------------------
+- Type: 1D Convolutional Neural Network
+- Convolutional Layers: 3
+- Dense Layers: 4
+- Total Parameters: 136,577
+
+Training Configuration:
+----------------------
+- Optimizer: Adam (lr=0.001)
+- Loss Function: Huber Loss
+- Batch Size: 64
+- Max Epochs: 150
+- Early Stopping: Yes (patience=20)
+- Learning Rate Reduction: Yes (patience=10)
+
+Performance Metrics:
+-------------------
+Training Set:
+  - RMSE: 1.0392
+  - MAE:  0.5604
+  - R²:   0.4315
+
+Validation Set:
+  - RMSE: 1.0885
+  - MAE:  0.5930
+  - R²:   0.4143
+
+Test Set:
+  - RMSE: 1.0669
+  - MAE:  0.5882
+  - R²:   0.4163
+
+Top 3 Most Important Features:
+------------------------------
+Feature  Importance
+  State    0.181191
+ Season    0.276392
+   Crop    0.284736
+
+Model Files Saved:
+-----------------
+- crop_yield_1d_cnn_model.h5 (Trained model)
+- scaler.pkl (Feature scaler)
+- label_encoders.pkl (Categorical encoders)
+- model_performance.png (Performance visualizations)
+- feature_importance.png (Feature importance plot)
+
+================================================================================
